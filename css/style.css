@@ -1053,6 +1053,7 @@ img { display: block; max-width: 100%; }
   /* Hero */
   .hero { padding: 100px 0 60px; }
   .hero-content { text-align: center; }
+  .hero-title { text-align: center; }
   .hero-title { font-size: 2rem; }
   .hero-sub { font-size: 1rem; margin-left: auto; margin-right: auto; }
   .hero-actions { flex-direction: column; gap: 12px; align-items: center; }
