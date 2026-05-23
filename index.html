@@ -226,8 +226,8 @@
           <svg viewBox="0 0 400 260" class="perf-chart">
             <defs>
               <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.4"/>
-                <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+                <stop offset="0%" stop-color="#e0b84e" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#e0b84e" stop-opacity="0"/>
               </linearGradient>
             </defs>
             <!-- Grid lines -->
@@ -236,17 +236,15 @@
             <line x1="0" y1="100" x2="400" y2="100" stroke="#ffffff10" stroke-width="1"/>
             <line x1="0" y1="50" x2="400" y2="50" stroke="#ffffff10" stroke-width="1"/>
             <!-- Benchmark line -->
-            <polyline points="0,200 80,185 160,175 240,165 320,155 400,145" fill="none" stroke="#ffffff30" stroke-width="1.5" stroke-dasharray="6,4"/>
+            <polyline points="0,200 200,185 400,165" fill="none" stroke="#ffffff30" stroke-width="1.5" stroke-dasharray="6,4"/>
             <!-- Fund line -->
-            <polygon points="0,200 40,190 80,170 120,175 160,140 200,120 240,130 280,90 320,70 360,50 400,30 400,200" fill="url(#chartGrad)"/>
-            <polyline points="0,200 40,190 80,170 120,175 160,140 200,120 240,130 280,90 320,70 360,50 400,30" fill="none" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="0,198 80,192 160,178 240,148 320,105 400,62 400,200" fill="url(#chartGrad)"/>
+            <polyline points="0,198 80,192 160,178 240,148 320,105 400,62" fill="none" stroke="#e0b84e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             <!-- Labels -->
-            <text x="10" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2021</text>
-            <text x="90" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2022</text>
-            <text x="170" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2023</text>
-            <text x="250" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2024</text>
-            <text x="330" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2025</text>
-            <text x="380" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2026</text>
+            <text x="10" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2024 Q1</text>
+            <text x="155" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2024 Q3</text>
+            <text x="295" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2025</text>
+            <text x="370" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2026</text>
             <!-- Legend -->
             <line x1="10" y1="240" x2="30" y2="240" stroke="#c9a84c" stroke-width="2"/>
             <text x="34" y="244" fill="#c9a84c" font-size="11" font-family="Inter">SME Funded Capital</text>
