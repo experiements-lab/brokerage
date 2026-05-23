@@ -1052,9 +1052,10 @@ img { display: block; max-width: 100%; }
 
   /* Hero */
   .hero { padding: 100px 0 60px; }
+  .hero-content { text-align: center; }
   .hero-title { font-size: 2rem; }
-  .hero-sub { font-size: 1rem; }
-  .hero-actions { flex-direction: column; gap: 12px; }
+  .hero-sub { font-size: 1rem; margin-left: auto; margin-right: auto; }
+  .hero-actions { flex-direction: column; gap: 12px; align-items: center; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .hero-badge { font-size: 0.72rem; padding: 5px 12px; }
 
@@ -1121,7 +1122,7 @@ img { display: block; max-width: 100%; }
   /* Hero */
   .hero { padding: 88px 0 48px; }
   .hero-title { font-size: 1.75rem; line-height: 1.18; }
-  .hero-sub { font-size: 0.92rem; }
+  .hero-sub { font-size: 0.92rem; max-width: 100%; }
 
   /* Stats */
   .stats-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
