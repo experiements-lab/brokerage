@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantEdge Brokerage | Quantitative Solutions</title>
+  <meta name="description" content="QuantEdge delivers institutional-grade quantitative trading strategies, risk analytics, and bespoke financial solutions for sophisticated investors." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────────── -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">Q</span>
+        <span class="logo-text">Quant<strong>Edge</strong></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Solutions</a>
+        <a href="#about">About</a>
+        <a href="#process">How It Works</a>
+        <a href="#stats">Performance</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-ghost">Log In</a>
+        <a href="#contact" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Markets Open — Live Trading
+      </div>
+      <h1 class="hero-title">
+        Precision-Driven<br />
+        <span class="gradient-text">Quantitative</span><br />
+        Financial Solutions
+      </h1>
+      <p class="hero-sub">
+        Institutional-grade algorithmic strategies, risk analytics, and bespoke
+        investment solutions — engineered for consistent, risk-adjusted returns.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-lg">Open an Account</a>
+        <a href="#services" class="btn btn-outline btn-lg">Explore Solutions</a>
+      </div>
+
+      <div class="hero-ticker" id="ticker">
+        <div class="ticker-track" id="tickerTrack"></div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ── TRUST STRIP ────────────────────────────────────────────── -->
+  <section class="trust-strip">
+    <div class="container">
+      <p class="trust-label">Regulated &amp; Trusted By</p>
+      <div class="trust-logos">
+        <span class="trust-logo">FSB Registered</span>
+        <span class="divider">|</span>
+        <span class="trust-logo">JSE Member</span>
+        <span class="divider">|</span>
+        <span class="trust-logo">FSCA Licensed</span>
+        <span class="divider">|</span>
+        <span class="trust-logo">ISO 27001</span>
+        <span class="divider">|</span>
+        <span class="trust-logo">Basel III Compliant</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ──────────────────────────────────────────────────── -->
+  <section class="stats" id="stats">
+    <div class="container stats-grid">
+      <div class="stat-card" data-target="4.2" data-suffix="B+">
+        <span class="stat-number" id="stat0">0</span>
+        <span class="stat-unit">ZAR AUM</span>
+        <p class="stat-label">Assets Under Management</p>
+      </div>
+      <div class="stat-card" data-target="18.7" data-suffix="%">
+        <span class="stat-number" id="stat1">0</span>
+        <span class="stat-unit">Avg. Annual Return</span>
+        <p class="stat-label">5-Year Annualised Performance</p>
+      </div>
+      <div class="stat-card" data-target="2300" data-suffix="+">
+        <span class="stat-number" id="stat2">0</span>
+        <span class="stat-unit">Clients</span>
+        <p class="stat-label">Institutional &amp; Private</p>
+      </div>
+      <div class="stat-card" data-target="0.61" data-suffix="">
+        <span class="stat-number" id="stat3">0</span>
+        <span class="stat-unit">Sharpe Ratio</span>
+        <p class="stat-label">Risk-Adjusted Returns</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ───────────────────────────────────────────────── -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Our Solutions</p>
+        <h2 class="section-title">Built for the Quantitatively Minded</h2>
+        <p class="section-sub">
+          Every strategy is back-tested across decades of data and stress-tested
+          across multiple market regimes before live deployment.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card featured">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M6 36L18 24l8 8 16-20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="10" r="3" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Algorithmic Trading</h3>
+          <p>High-frequency and medium-frequency strategies across equities, derivatives, and FX — executed with sub-millisecond latency on co-located infrastructure.</p>
+          <ul class="service-features">
+            <li>Momentum &amp; mean-reversion models</li>
+            <li>Pairs trading &amp; statistical arbitrage</li>
+            <li>ML-enhanced signal generation</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/><path d="M14 24h4l5-8 6 16 4-8h5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Risk Analytics</h3>
+          <p>Real-time portfolio risk decomposition, VaR modelling, scenario analysis, and tail-risk hedging frameworks tailored to your mandate.</p>
+          <ul class="service-features">
+            <li>CVaR &amp; Monte Carlo simulation</li>
+            <li>Factor exposure analysis</li>
+            <li>Stress testing &amp; drawdown controls</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/><path d="M24 6v18l10 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Portfolio Optimisation</h3>
+          <p>Modern and post-modern portfolio theory applied with machine-learning overlays, black-litterman models, and dynamic rebalancing.</p>
+          <ul class="service-features">
+            <li>Multi-asset allocation</li>
+            <li>ESG-constrained portfolios</li>
+            <li>Tax-efficient rebalancing</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 40V20l16-12 16 12v20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="18" y="28" width="12" height="12" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Structured Products</h3>
+          <p>Bespoke capital-protected notes, barrier options, and yield-enhancement structures crafted around your specific risk-return objectives.</p>
+          <ul class="service-features">
+            <li>Capital protection certificates</li>
+            <li>Autocallable notes</li>
+            <li>Reverse convertibles</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M12 12h24M12 20h18M12 28h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="36" cy="34" r="8" stroke="currentColor" stroke-width="2"/><path d="M33 34l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Quantitative Research</h3>
+          <p>Proprietary alpha-generation research, factor discovery, and alternative data integration to keep your portfolio ahead of the market.</p>
+          <ul class="service-features">
+            <li>Alternative data pipelines</li>
+            <li>NLP sentiment analytics</li>
+            <li>Cross-asset factor models</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4L4 16v16l20 12 20-12V16L24 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 16l20 12 20-12M24 28v16" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Prime Brokerage</h3>
+          <p>Consolidated clearing, custody, margin financing, and securities lending — a single prime relationship for all your trading activity.</p>
+          <ul class="service-features">
+            <li>Cross-margining &amp; netting</li>
+            <li>Securities lending programme</li>
+            <li>24/7 dedicated desk</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ──────────────────────────────────────────────────── -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-chart">
+          <svg viewBox="0 0 400 260" class="perf-chart">
+            <defs>
+              <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- Grid lines -->
+            <line x1="0" y1="200" x2="400" y2="200" stroke="#ffffff10" stroke-width="1"/>
+            <line x1="0" y1="150" x2="400" y2="150" stroke="#ffffff10" stroke-width="1"/>
+            <line x1="0" y1="100" x2="400" y2="100" stroke="#ffffff10" stroke-width="1"/>
+            <line x1="0" y1="50" x2="400" y2="50" stroke="#ffffff10" stroke-width="1"/>
+            <!-- Benchmark line -->
+            <polyline points="0,200 80,185 160,175 240,165 320,155 400,145" fill="none" stroke="#ffffff30" stroke-width="1.5" stroke-dasharray="6,4"/>
+            <!-- Fund line -->
+            <polygon points="0,200 40,190 80,170 120,175 160,140 200,120 240,130 280,90 320,70 360,50 400,30 400,200" fill="url(#chartGrad)"/>
+            <polyline points="0,200 40,190 80,170 120,175 160,140 200,120 240,130 280,90 320,70 360,50 400,30" fill="none" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Labels -->
+            <text x="10" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2019</text>
+            <text x="90" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2020</text>
+            <text x="170" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2021</text>
+            <text x="250" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2022</text>
+            <text x="330" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2023</text>
+            <text x="380" y="218" fill="#ffffff50" font-size="10" font-family="Inter">2024</text>
+            <!-- Legend -->
+            <line x1="10" y1="240" x2="30" y2="240" stroke="#c9a84c" stroke-width="2"/>
+            <text x="34" y="244" fill="#c9a84c" font-size="11" font-family="Inter">QuantEdge Fund</text>
+            <line x1="150" y1="240" x2="170" y2="240" stroke="#ffffff50" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <text x="174" y="244" fill="#ffffff50" font-size="11" font-family="Inter">Benchmark</text>
+          </svg>
+        </div>
+        <div class="about-cards-small">
+          <div class="mini-card">
+            <span class="mini-val gold">+127%</span>
+            <span class="mini-lbl">Cumulative 5Y</span>
+          </div>
+          <div class="mini-card">
+            <span class="mini-val">14.2%</span>
+            <span class="mini-lbl">Max Drawdown</span>
+          </div>
+          <div class="mini-card">
+            <span class="mini-val gold">1.84</span>
+            <span class="mini-lbl">Sortino Ratio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <p class="section-tag">About QuantEdge</p>
+        <h2 class="section-title">Where Mathematics Meets Markets</h2>
+        <p>Founded by a team of PhDs, quants, and experienced traders, QuantEdge Brokerage was built on a single conviction: disciplined, data-driven investing consistently outperforms discretionary guesswork over any meaningful time horizon.</p>
+        <p>We combine cutting-edge machine-learning research with rigorous classical finance theory, running live strategies across South African, pan-African, and global markets from our Johannesburg and Cape Town offices.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">&#9670;</div>
+            <div>
+              <strong>Rigorous Research</strong>
+              <p>Every strategy must pass out-of-sample testing before a single cent is deployed.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">&#9670;</div>
+            <div>
+              <strong>Full Transparency</strong>
+              <p>Real-time dashboards, daily NAV reporting, and open-book risk attribution.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">&#9670;</div>
+            <div>
+              <strong>Client-First Alignment</strong>
+              <p>Performance fees only — we grow when you grow.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary">Meet the Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ───────────────────────────────────────────── -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Onboarding</p>
+        <h2 class="section-title">Start Investing in 4 Steps</h2>
+      </div>
+
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Consultation</h3>
+            <p>Schedule a call with a senior quant strategist to map your investment objectives, risk tolerance, and time horizon.</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>KYC &amp; Onboarding</h3>
+            <p>Complete our fully digital FICA/FAIS-compliant onboarding — typically completed in under 24 hours.</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Portfolio Construction</h3>
+            <p>Our quant team configures a bespoke or model portfolio aligned to your mandate and stress-tests it before go-live.</p>
+          </div>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h3>Live &amp; Reporting</h3>
+            <p>Your portfolio goes live with 24/7 monitoring, real-time dashboard access, and monthly attribution reports.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ───────────────────────────────────────────── -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Testimonials</p>
+        <h2 class="section-title">Trusted by Serious Investors</h2>
+      </div>
+
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"QuantEdge's algorithmic strategies delivered 22% net of fees last year while our previous manager lagged the benchmark. The transparency and reporting is unmatched."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MN</div>
+            <div>
+              <strong>M. Nkosi</strong>
+              <span>CIO, Mzansi Pension Fund</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"The risk analytics suite gave us a completely new lens on our portfolio. We identified and hedged tail risks we didn't even know we had. Exceptional team."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SP</div>
+            <div>
+              <strong>S. Patel</strong>
+              <span>Head of Trading, Coastal Asset Managers</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Onboarding was seamless. Within 48 hours we had a live portfolio and access to the real-time dashboard. The structured product they designed perfectly matched our mandate."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">TM</div>
+            <div>
+              <strong>T. Meyer</strong>
+              <span>Private Client, Family Office</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <p class="section-tag">Get In Touch</p>
+        <h2 class="section-title">Ready to Quantify Your Edge?</h2>
+        <p>Speak with one of our senior quant strategists today. No obligation — just a focused conversation about your investment goals.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-icon">&#9993;</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:solutions@quantedge.co.za">solutions@quantedge.co.za</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">&#9742;</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+27114000000">+27 11 400 0000</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">&#9679;</span>
+            <div>
+              <strong>Offices</strong>
+              <span>Sandton, Johannesburg &amp; V&amp;A Waterfront, Cape Town</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="john@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+27 11 000 0000" />
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest">
+            <option value="">Select a solution…</option>
+            <option>Algorithmic Trading</option>
+            <option>Risk Analytics</option>
+            <option>Portfolio Optimisation</option>
+            <option>Structured Products</option>
+            <option>Quantitative Research</option>
+            <option>Prime Brokerage</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="aum">Approximate AUM / Investment Size</label>
+          <select id="aum">
+            <option value="">Select range…</option>
+            <option>Under R1 million</option>
+            <option>R1m – R10m</option>
+            <option>R10m – R50m</option>
+            <option>R50m – R250m</option>
+            <option>R250m+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="Tell us about your investment objectives…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        <p class="form-disclaimer">Your information is kept strictly confidential in accordance with POPIA.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark">Q</span>
+          <span class="logo-text">Quant<strong>Edge</strong></span>
+        </a>
+        <p>Institutional-grade quantitative solutions for the modern investor.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">&#120143;</a>
+          <a href="#" aria-label="Bloomberg">B</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#services">Algorithmic Trading</a></li>
+          <li><a href="#services">Risk Analytics</a></li>
+          <li><a href="#services">Portfolio Optimisation</a></li>
+          <li><a href="#services">Structured Products</a></li>
+          <li><a href="#services">Quant Research</a></li>
+          <li><a href="#services">Prime Brokerage</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#contact">Careers</a></li>
+          <li><a href="#contact">News &amp; Insights</a></li>
+          <li><a href="#contact">Regulatory Disclosures</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">POPIA Notice</a></li>
+          <li><a href="#">Conflicts of Interest</a></li>
+          <li><a href="#">Complaints Procedure</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 QuantEdge Brokerage (Pty) Ltd. Reg. No. 2018/123456/07. FSP Licence No. 12345. An authorised Financial Services Provider. Past performance is not indicative of future results. Investments can go up as well as down.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
