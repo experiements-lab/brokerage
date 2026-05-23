@@ -189,9 +189,9 @@ const totalSteps = 3;
 
 const channelMap = {
   'Business Plan':   { channels: 'Commercial Banks, DFIs',   timeline: '4–8 weeks'  },
-  'Government Fund': { channels: 'SEFA, NEF, IDC',           timeline: '6–10 weeks' },
-  'Bank Loan':       { channels: 'Major Commercial Banks',    timeline: '3–6 weeks'  },
-  'Investor':        { channels: 'Venture Capital, Angels',   timeline: '8–16 weeks' },
+  'Government Fund': { channels: 'Development Finance Network',  timeline: '6–10 weeks' },
+  'Bank Loan':       { channels: 'Lending Network',              timeline: '3–6 weeks'  },
+  'Investor':        { channels: 'Equity Funding Network',       timeline: '8–16 weeks' },
 };
 
 function updateWizard() {
