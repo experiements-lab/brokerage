@@ -385,13 +385,10 @@ timeSlotsGrid.querySelectorAll('.slot-btn').forEach(btn => {
 bookingForm.addEventListener('submit', (e) => {
   e.preventDefault();
   
-  const specialist = document.getElementById('bookingSpecialist').value;
-  
   const formattedDate = new Date(selectedDateStr).toLocaleDateString('en-US', {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
   });
 
-  document.getElementById('summarySpecialist').textContent = specialist;
   document.getElementById('summaryDateTime').textContent = `${formattedDate} at ${selectedTimeStr} SAST`;
   
   const submitBtn = bookingForm.querySelector('button[type="submit"]');
