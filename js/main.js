@@ -389,6 +389,8 @@ bookingForm.addEventListener('submit', (e) => {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
   });
 
+  const fundingType = document.getElementById('bookFundingType').value;
+  document.getElementById('summaryFunding').textContent = fundingType || 'Funding Consultation';
   document.getElementById('summaryDateTime').textContent = `${formattedDate} at ${selectedTimeStr} SAST`;
   
   const submitBtn = bookingForm.querySelector('button[type="submit"]');
