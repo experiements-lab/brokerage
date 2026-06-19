@@ -1,3 +1,28 @@
+/* ── EMAILJS CONFIG ──────────────────────────────────────────── */
+/* Sign up at https://www.emailjs.com, create an Email Service + Template,
+   then replace the three placeholders below. Emails are sent to
+   info@quantitativesolutions.co.za as configured in the EmailJS template. */
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const NOTIFY_EMAIL = 'info@quantitativesolutions.co.za';
+
+if (window.emailjs) {
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
+function sendNotificationEmail(subject, fieldsObj) {
+  if (!window.emailjs) return Promise.resolve();
+  const message = Object.entries(fieldsObj)
+    .map(([key, value]) => `${key}: ${value}`)
+    .join('\n');
+  return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+    to_email: NOTIFY_EMAIL,
+    subject,
+    message,
+  });
+}
+
 /* ── NAVBAR SCROLL ───────────────────────────────────────────── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -219,11 +244,24 @@ btnWizardNext.addEventListener('click', () => {
     currentStep++;
     updateWizard();
   } else {
+    const firstName = document.getElementById('wizardFirstName').value;
+    const lastName  = document.getElementById('wizardLastName').value;
+    const phone     = document.getElementById('wizardPhone').value;
     const email     = document.getElementById('wizardEmail').value;
     const objective = wizardForm.querySelector('input[name="objective"]:checked').value;
+    const amount    = document.getElementById('assessFunding').value;
     const stage     = document.getElementById('assessStage').value;
     const info      = channelMap[objective] || { channels: 'SEFA, NEF, IDC', timeline: '6–10 weeks' };
     const readiness = stage.startsWith('Start-up') ? 'Pre-qualification review required' : 'Good — eligible to apply';
+
+    sendNotificationEmail('New Funding Readiness Assessment', {
+      Name: `${firstName} ${lastName}`,
+      Email: email,
+      Phone: phone,
+      'Type of Funding': objective,
+      'Funding Amount Required': amount,
+      'Business Trading Stage': stage,
+    }).catch(err => console.error('Failed to send assessment email:', err));
 
     document.getElementById('resMandate').textContent  = objective;
     document.getElementById('resSharpe').textContent   = info.channels;
@@ -389,14 +427,30 @@ bookingForm.addEventListener('submit', (e) => {
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
   });
 
-  const fundingType = document.getElementById('bookFundingType').value;
+  const name         = document.getElementById('bookName').value;
+  const email        = document.getElementById('bookEmail').value;
+  const phone        = document.getElementById('bookPhone').value;
+  const fundingType  = document.getElementById('bookFundingType').value;
+  const fundingAmount = document.getElementById('bookFundingAmount').value;
+  const stage        = document.getElementById('bookStage').value;
+
   document.getElementById('summaryFunding').textContent = fundingType || 'Funding Consultation';
   document.getElementById('summaryDateTime').textContent = `${formattedDate} at ${selectedTimeStr} SAST`;
-  
+
   const submitBtn = bookingForm.querySelector('button[type="submit"]');
   submitBtn.textContent = 'Booking Slot…';
   submitBtn.disabled = true;
-  
+
+  sendNotificationEmail('New Consultation Booking', {
+    Name: name,
+    Email: email,
+    Phone: phone,
+    'Type of Funding': fundingType,
+    'Funding Amount Required': fundingAmount,
+    'Business Trading Stage': stage,
+    'Requested Date/Time': `${formattedDate} at ${selectedTimeStr} SAST`,
+  }).catch(err => console.error('Failed to send booking email:', err));
+
   setTimeout(() => {
     submitBtn.textContent = 'Confirm Booking';
     submitBtn.disabled = false;
