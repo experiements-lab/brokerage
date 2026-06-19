@@ -1,17 +1,16 @@
 /* ── EMAILJS CONFIG ──────────────────────────────────────────── */
-/* Sign up at https://www.emailjs.com, create an Email Service + Template,
-   then replace the three placeholders below. Emails are sent to
-   info@quantitativesolutions.co.za as configured in the EmailJS template. */
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+/* Notification emails are sent to info@quantitativesolutions.co.za via the
+   "Contact Us" EmailJS template. */
+const EMAILJS_PUBLIC_KEY  = '4ZFbIyWXn5EZedWfz';
+const EMAILJS_SERVICE_ID  = 'service_qspfy99';
+const EMAILJS_TEMPLATE_ID = 'template_yzclxzd';
 const NOTIFY_EMAIL = 'info@quantitativesolutions.co.za';
 
 if (window.emailjs) {
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 }
 
-function sendNotificationEmail(subject, fieldsObj) {
+function sendNotificationEmail(subject, leadName, fieldsObj) {
   if (!window.emailjs) return Promise.resolve();
   const message = Object.entries(fieldsObj)
     .map(([key, value]) => `${key}: ${value}`)
@@ -19,6 +18,8 @@ function sendNotificationEmail(subject, fieldsObj) {
   return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
     to_email: NOTIFY_EMAIL,
     subject,
+    name: leadName,
+    time: new Date().toLocaleString('en-ZA', { timeZone: 'Africa/Johannesburg' }),
     message,
   });
 }
@@ -254,7 +255,7 @@ btnWizardNext.addEventListener('click', () => {
     const info      = channelMap[objective] || { channels: 'SEFA, NEF, IDC', timeline: '6–10 weeks' };
     const readiness = stage.startsWith('Start-up') ? 'Pre-qualification review required' : 'Good — eligible to apply';
 
-    sendNotificationEmail('New Funding Readiness Assessment', {
+    sendNotificationEmail('New Funding Readiness Assessment', `${firstName} ${lastName}`, {
       Name: `${firstName} ${lastName}`,
       Email: email,
       Phone: phone,
@@ -441,7 +442,7 @@ bookingForm.addEventListener('submit', (e) => {
   submitBtn.textContent = 'Booking Slot…';
   submitBtn.disabled = true;
 
-  sendNotificationEmail('New Consultation Booking', {
+  sendNotificationEmail('New Consultation Booking', name, {
     Name: name,
     Email: email,
     Phone: phone,
